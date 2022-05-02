@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tittle</title>
+</head>
+<body>
+    {% if email == '' %}
+        <p>Введён некорректный Email</p>
+    {% else %}
+        <p>{{ firstname }}</p>
+        <p>{{ lastname }}</p>
+        <p>{{ email }}</p>
+        <p>{{ age }}</p>
+    {% endif %}
+</body>
+</html>

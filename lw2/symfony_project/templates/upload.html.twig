@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tittle</title>
+</head>
+<body>
+    {% if email == null or email == ''%}
+        <p>Email не введён</p>
+    {% else %}
+        <p>First name: {{ firstname }}</p>
+        <p>Last name: {{ lastname }}</p>
+        <p>Email: {{ email }}</p>
+        <p>Age: {{ age }}</p>
+    {% endif %}
+</body>
+</html>

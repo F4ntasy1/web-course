@@ -1,0 +1,6 @@
+save_survey:
+    path: /save-survey
+    controller: App\Controller\SurveyController::saveSurvey
+load_survey:
+    path: /load-survey
+    controller: App\Controller\SurveyController::loadSurvey
