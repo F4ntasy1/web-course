@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Page</title>
+</head>
+<body>
+<div>
+    <p>Запись</p>
+    <form enctype="multipart/form-data" method="POST" action="/save-survey">
+        <input name="first_name" placeholder="Ваше имя">
+        <input name="last_name" placeholder="Ваша фамилия">
+        <input type="email" name="email" placeholder="Email">
+        <input name="age" placeholder="Ваш возраст">
+        <p>Загрузите вашу фотографию:</p>
+        <input type="file" name="avatar" size="10" accept="image/*">
+        <button type="submit">
+            <p>Отправить данные</p>
+        </button>
+    </form>
+</div>
+</body>
+</html>

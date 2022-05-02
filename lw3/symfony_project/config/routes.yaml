@@ -1,0 +1,13 @@
+save_survey:
+    path: /save-survey
+    controller: App\Controller\SurveyController::saveSurvey
+load_survey:
+    path: /load-survey
+    controller: App\Controller\SurveyController::loadSurvey
+save-form:
+    path: /save-form
+    controller: App\View\SurveyView::saveForm
+load-form:
+    path: /load-form
+    controller: App\View\SurveyView::loadForm
+

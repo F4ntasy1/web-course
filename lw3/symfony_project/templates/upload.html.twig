@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tittle</title>
+</head>
+<body>
+    {% if email == null or email == ''%}
+        <p>Email не введён</p>
+    {% else %}
+        <p>Ваше имя: {{ firstname }}</p>
+        <p>Ваша фамилия: {{ lastname }}</p>
+        <p>Ваш Email: {{ email }}</p>
+        <p>Ваш возраст: {{ age }}</p>
+        {% if avatar != null %}
+            <p>Ваш аватар:</p>
+            <img src="./{{ email }}/{{ avatar }}" width="300px">
+        {% else %}
+            <p>Вы не добавили аватар</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
