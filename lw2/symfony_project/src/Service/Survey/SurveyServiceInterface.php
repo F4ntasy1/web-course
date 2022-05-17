@@ -5,16 +5,15 @@ namespace App\Service\Survey;
 use App\Module\Survey\SurveyFileStorage;
 use App\Module\Survey\RequestSurveyLoader;
 
-class SurveyService implements SurveyInterface
+class SurveyServiceInterface implements SurveyInterface
 {
     public function saveSurvey() : array
     {
         $requestSurveyLoader = new RequestSurveyLoader();
-        $surveyFileStorage = new SurveyFileStorage();
-
         $survey = $requestSurveyLoader->getSurvey();
-        $surveyFileStorage->getData($survey);
+        $surveyFileStorage = new SurveyFileStorage($survey);
         $surveyFileStorage->saveSurvey();
+
         return
             [
                 'firstname' => $survey->getFirstName(),
@@ -27,11 +26,10 @@ class SurveyService implements SurveyInterface
     public function loadSurvey() : array
     {
         $requestSurveyLoader = new RequestSurveyLoader();
-        $surveyFileStorage = new SurveyFileStorage();
-
         $survey = $requestSurveyLoader->getSurvey();
-        $surveyFileStorage->getData($survey);
+        $surveyFileStorage = new SurveyFileStorage($survey);
         $loadSurvey = $surveyFileStorage->loadSurvey();
+
         return
             [
                 'firstname' => $loadSurvey->getFirstName(),

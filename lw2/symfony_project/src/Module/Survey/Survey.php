@@ -9,7 +9,7 @@ class Survey
     private ?string $email;
     private string $age;
 
-    function __construct(string $firstname, string $lastname, ?string $email, string $age)
+    public function __construct(string $firstname, string $lastname, ?string $email, string $age)
     {
         $this->firstname = $firstname;
         $this->lastname = $lastname;

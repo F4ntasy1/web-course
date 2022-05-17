@@ -8,14 +8,6 @@ class SurveyFileStorage
     private const FORMAT = ".txt";
     private const COLON = ": ";
 
-    private ?string $filename;
-    private string $firstname;
-    private string $lastname;
-    private ?string $email;
-    private int $age;
-
-    private array $result;
-    private array $keys;
     private array $values = [
         "First Name",
         "Last Name",
@@ -23,7 +15,7 @@ class SurveyFileStorage
         "Age",
     ];
 
-    public function getData(Survey $survey) : void
+    public function __construct(Survey $survey)
     {
         $this->firstname = $survey->getFirstName();
         $this->lastname = $survey->getLastName();
