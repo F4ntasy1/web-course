@@ -5,12 +5,6 @@ class SurveyPrint
     private const COLON = ": ";
     private const SEPARATOR = "<br>";
 
-    private string $firstname;
-    private string $lastname;
-    private ?string $email;
-    private int $age;
-
-    private array $result;
     private array $values = [
         "First Name",
         "Last Name",
@@ -25,7 +19,7 @@ class SurveyPrint
         $this->email = $survey->getEmail();
         $this->age = $survey->getAge();
 
-        $keys = [
+        $this->keys = [
             "First Name" => $this->firstname,
             "Last Name" => $this->lastname,
             "Email" => $this->email,
@@ -36,10 +30,10 @@ class SurveyPrint
         {
             for ($i = 0; $i < count($this->values); $i++)
             {
-                $result .= $this->values[$i] . self::COLON . $keys[$this->values[$i]] . self::SEPARATOR;
+                $this->result .= $this->values[$i] . self::COLON . $this->keys[$this->values[$i]] . self::SEPARATOR;
             }
 
-            echo $result;
+            echo $this->result;
         }
     }
 }
