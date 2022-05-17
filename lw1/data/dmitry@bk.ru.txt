@@ -1,4 +1,0 @@
-First Name: Dima
-Last Name: Petukhov
-Email: dmitry@bk.ru
-Age: 19
